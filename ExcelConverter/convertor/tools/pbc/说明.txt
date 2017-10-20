@@ -1,0 +1,4 @@
+
+protobuf.lua 为从云风pbc模块中的 pbc-master\binding\lua\protobuf.lua , 同时将第一行代码 local c = require "protobuf.c" 修改为  local c = require "protobufc"
+
+protobufc 对应外部的 c 库文件 protobufc.dll， 该库是从 google protobuf-2.5.0工程编译成动态链接库而来.

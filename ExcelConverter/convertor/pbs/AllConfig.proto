@@ -1,0 +1,12 @@
+import "ActivityConfig.proto";
+import "MineCardCountConfig.proto";
+import "MineCoinConfig.proto";
+import "DailyEventConfig.proto";
+import "MineInitDataConfig.proto";
+message AllConfig {
+	repeated ActivityConfig activity = 1;
+	repeated MineCardCountConfig minecardcount = 2;
+	repeated MineCoinConfig minecoin = 3;
+	repeated DailyEventConfig dailyevent = 4;
+	repeated MineInitDataConfig mineinitdata = 5;
+}

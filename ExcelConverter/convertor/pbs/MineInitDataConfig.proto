@@ -1,0 +1,7 @@
+import "GroupTypeConfig.proto";
+message MineInitDataConfig {
+	required int32 id = 1;
+	required int32 coin_rate = 2;
+	required int32 time = 3;
+	required int32 loyalty_rate = 4;
+}

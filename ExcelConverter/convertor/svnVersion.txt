@@ -1,0 +1,12 @@
+Path: E:\work\sanguo_res\trunk\Data
+Working Copy Root Path: E:\work\sanguo_res
+URL: http://10.103.252.100:18080/svn/sanguo_card_req/trunk/Data
+Repository Root: http://10.103.252.100:18080/svn/sanguo_card_req
+Repository UUID: 21f7426a-5471-4a8a-903e-91259200d9ff
+Revision: 8265
+Node Kind: directory
+Schedule: normal
+Last Changed Author: zhaowen
+Last Changed Rev: 8265
+Last Changed Date: 2015-04-29 16:08:34 +0800 (周三, 29 四月 2015)
+

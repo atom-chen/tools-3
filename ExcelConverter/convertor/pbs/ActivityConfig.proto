@@ -1,0 +1,22 @@
+import "GroupTypeConfig.proto";
+message ActivityConfig {
+	repeated int32 activity_show = 1;
+	required int32 act_type = 2;
+	required int32 open_date = 3;
+	required int32 hot_type = 4;
+	required string rule = 5;
+	repeated int32 week_date = 6;
+	required int32 close_date = 7;
+	required int32 showornot = 8;
+	required int32 id = 9;
+	required int32 title_res = 10;
+	required int32 activity_id = 11;
+	required string desc = 12;
+	repeated int32 activity_drop = 13;
+	required int32 show_type = 14;
+	required int32 showrule = 15;
+	repeated GroupTypeConfig kk = 16;
+	required int32 act_same_index = 17;
+	required int32 date_type = 18;
+	required string activity_name = 19;
+}

@@ -1,0 +1,51 @@
+
+系统需要安装lua5.1环境
+
+
+目录说明：
+	1) 目录 xlsx 存放所有 excel 表(包括多语言表 Multi_lang.xlsx)
+	2) 目录 convertor 为转换工具, 其下子目录 
+		data 生成的 data 及 pb 文件
+		lua_ucs/lua_utf8 由excel导出的lua文件; lua_utf8 由lua_ucs转换编码而来;
+		tools 存放相关的工具环境;
+				pbc/pbc-master为云风的pbc; 
+				protoc-generator为 windows下将proto生成 pb/cc/h 的执行文件.
+				iconv 为文件编码转换工具;
+				xlsx2Lua 为使用 libxl 库解析读取excel的 vs 工程源码;
+		
+	run.bat : 由excel生成data的总入口;
+	ExportStringToExcel.bat 将excel中所有string导出到一个Multi_lang.xlsx表中(放在上级目录 xlsx 中); 一般用在项目结尾时，数据不需要大改动的
+			情况下使用，使用前需要将之前生成的Multi_lang.xlsx删除, 因为平时打包数据时如果不存在则会自动生成一个Multi_lang.xlsx表；当前语言
+			类型在 Multi_lang.xlsx里配置;
+	createC++.bat/CreatePbs.bat  将proto文件生成pb/cc/h文件； 在run.bat调用
+	getVersion.bat 根据实际项目需要获取SVN版本号, 并写道data中; 在run.bat调用, 目前自动关闭；当需要开启时,需修改run.bat和luaToData.lua里;
+	luaToData.lua  在lua环境下创建proto, pb, cc/h, 打包数据; 在run.bat调用
+	CompressData.bat 将data压缩成zip, (在win32由于解压接口未导出为lua， 所以暂时不支持压缩data， 其他手机平台则支持)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+1. 创建一个 win32项目, 名字为protobufc, 选择输出为dll 
+2. 将 pbc-master\binding\lua\pbc-lua.c 拷贝到 pbc-master\protobufc\ ，并将后缀名改为cpp
+3. 修改pbc-lua.cpp文件内容: 
+	文件头定义：
+	#ifdef WIN32
+	#define DLL_EXPORT __declspec(dllexport)
+	#else
+	#define DLL_EXPORT 
+	#endif
+
+	
+	将 int luaopen_protobuf_c(lua_State *L) {
+	修改为
+	
+	extern "C" DLL_EXPORT int luaopen_protobufc(lua_State *L) {	//注意函数名也修改了，供 protobuf.lua require()时使用
+
+
+4. VS工程删除所有头文件和源文件； 只添加 pbc-lua.cpp 一个文件;
+
+5. 配置工程属性:
+	C/C++ /预编译头： 删除,即不适用预编译头 stdafx.h
+
+
+	C/C++ 添加头文件路径： 
+		C:\Program Files (x86)\Lua\5.1\include      				// lua环境头文件路径
+		E:\hlb\ExcelConverter\convertor\tools\pbc-master   			// pbc.h 头文件路径
+
+	连接器:
+		常规/附加库目录: 
+		C:\Program Files %28x86%29\Lua\5.1\lib;
+		E:\hlb\ExcelConverter\convertor\tools\pbc-master\Debug;    //pbc.lib路径
+		输入/附加依赖项:
+		lua5.1.lib;
+		pbc.lib;
+		
+	然后编译工程即可输出dll， 注意由于要引用到pbc.lib 所以，必须确保 pbc.sln 编译通过生成pbc.lib；
+	
+	

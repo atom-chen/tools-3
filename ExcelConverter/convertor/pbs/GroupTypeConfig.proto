@@ -1,0 +1,3 @@
+message GroupTypeConfig{
+	repeated int32 array = 1;
+}

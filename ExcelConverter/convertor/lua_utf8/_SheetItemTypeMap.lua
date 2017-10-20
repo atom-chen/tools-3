@@ -1,0 +1,47 @@
+local SheetItemTypeMap = {
+	Activity = {
+				id = "int",
+				kk = "group",
+				activity_id = "int",
+				activity_name = "string",
+				act_type = "int",
+				date_type = "int",
+				open_date = "int",
+				close_date = "int",
+				week_date = "array",
+				act_same_index = "int",
+				activity_drop = "array",
+				activity_show = "array",
+				showornot = "int",
+				showrule = "int",
+				show_type = "int",
+				title_res = "int",
+				desc = "string",
+				rule = "string",
+				hot_type = "int",
+	},
+	DailyEvent = {
+				id = "int",
+				activity_id = "int",
+				open_time  = "int",
+				close_time = "int",
+	},
+	MineInitData = {
+				id = "int",
+				time = "int",
+				coin_rate = "int",
+				loyalty_rate = "int",
+	},
+	MineCoin = {
+				id = "int",
+				miner_get = "int",
+				mine_owener_get = "int",
+				miner_loyalty = "int",
+	},
+	MineCardCount = {
+				id = "int",
+				max_card_count = "int",
+				max_mine_count = "int",
+	},
+}
+return SheetItemTypeMap

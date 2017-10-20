@@ -1,0 +1,7 @@
+import "GroupTypeConfig.proto";
+message MineCoinConfig {
+	required int32 id = 1;
+	required int32 miner_loyalty = 2;
+	required int32 mine_owener_get = 3;
+	required int32 miner_get = 4;
+}

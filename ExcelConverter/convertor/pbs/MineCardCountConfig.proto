@@ -1,0 +1,6 @@
+import "GroupTypeConfig.proto";
+message MineCardCountConfig {
+	required int32 id = 1;
+	required int32 max_card_count = 2;
+	required int32 max_mine_count = 3;
+}

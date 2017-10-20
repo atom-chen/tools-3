@@ -1,0 +1,7 @@
+import "GroupTypeConfig.proto";
+message DailyEventConfig {
+	required int32 id = 1;
+	required int32 open_time = 2;
+	required int32 close_time = 3;
+	required int32 activity_id = 4;
+}
