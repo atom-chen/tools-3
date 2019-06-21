@@ -1,0 +1,8 @@
+
+1.在服务中关闭如下服务：
+	Background Intelligent Transfer Service
+	Windows Update 打开后在常规和恢复页中都要修改。
+
+2.键盘组合“WIN+R”呼出运行框，在框内输入 “gpedit.msc”。
+	找到“管理模块-Windows组件-Windows更新-配置自动更新-策略设置”。
+	在设置中我们只需要把“未配置”换成“已禁用”即可
